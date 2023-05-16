@@ -525,6 +525,10 @@ console.log(average);
 for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
+  
+  nullish coalising is best solution for this because the x is undefine
+  console.log(`Odd of Victory ${game[team] ?? 'draw'} ${odd}`)
+  
 }
 
 // Odd of victory Bayern Munich: 1.33
